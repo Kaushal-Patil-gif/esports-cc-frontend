@@ -1,13 +1,11 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import Services from "./pages/Services.jsx";  
+import Navbar from "./components/layout/Navbar.jsx";
+import Landing from "./pages/landing/Landing.jsx";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Services />
+      <Landing />
     </>
   );
 }

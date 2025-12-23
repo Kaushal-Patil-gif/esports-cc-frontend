@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import Button from "../../components/common/Button";
 
-function Hero() {
+function HeroSection() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -17,15 +18,15 @@ function Hero() {
       </p>
 
       <div className="mt-8 flex justify-center gap-4">
-        <button className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition">
+        <Button variant="primary">
           Explore Services
-        </button>
-        <button className="border border-gray-300 px-6 py-3 rounded-md hover:bg-gray-100 transition">
+        </Button>
+        <Button variant="secondary">
           Become a Pro
-        </button>
+        </Button>
       </div>
     </motion.section>
   );
 }
 
-export default Hero;
+export default HeroSection;

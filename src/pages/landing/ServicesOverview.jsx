@@ -1,6 +1,4 @@
-import ServiceCard from "../components/ServiceCard";
-
-
+import ServiceCard from "../../components/marketplace/ServiceCard";
 
 const services = [
   {
@@ -25,17 +23,13 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function ServicesOverview() {
   return (
     <section className="bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 py-20">
-
-        {/* Section Heading */}
         <h2 className="text-3xl font-bold mb-12 text-center">
           Popular Professional Services
         </h2>
-
-        {/* Services Grid */}
         <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard
@@ -46,7 +40,6 @@ export default function Services() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );

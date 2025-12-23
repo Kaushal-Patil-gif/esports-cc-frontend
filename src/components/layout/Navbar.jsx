@@ -1,3 +1,5 @@
+import Button from "../common/Button";
+
 function Navbar() {
   return (
     <nav className="bg-white shadow-sm">
@@ -14,9 +16,9 @@ function Navbar() {
           <a className="text-gray-700 hover:text-green-600 cursor-pointer">
             Become a Pro
           </a>
-          <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
+          <Button variant="primary" className="px-4 py-2">
             Sign In
-          </button>
+          </Button>
         </div>
 
       </div>

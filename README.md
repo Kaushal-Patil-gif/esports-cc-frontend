@@ -1,16 +1,132 @@
-# React + Vite
+# 🎮 Esports Content Creator Collaboration Platform (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the frontend for the Esports Content Creator Collaboration Platform.
+The project is built using **React + Vite + Tailwind CSS** and follows a **feature-based, scalable structure**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Goal
 
-## React Compiler
+To provide a dedicated platform where:
+- Content creators can hire esports freelancers
+- Freelancers can sell services (editing, thumbnails, SEO, etc.)
+- Collaboration happens securely with timelines, ratings, and dashboards
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧱 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- Tailwind CSS
+- JavaScript (ES6+)
+- GitHub (PR-based workflow)
+
+---
+
+## 📁 Project Structure (High Level)
+
+src/
+├── assets/ # Images, icons
+├── components/ # Reusable UI components
+├── pages/ # Full page screens
+├── routes/ # App routing (lead-owned)
+├── services/ # API calls (Phase 2)
+├── context/ # Global state (Phase 2)
+├── hooks/ # Custom hooks
+├── utils/ # Constants & helpers
+├── App.jsx # App container (locked)
+├── main.jsx # Entry point (locked)
+└── index.css # Tailwind + global styles
+
+
+---
+
+## 🧩 Folder Responsibilities
+
+### `components/`
+Reusable UI blocks (buttons, cards, profile sections, admin tables).
+
+### `pages/`
+Complete screens like:
+- Landing
+- Marketplace
+- Profile
+- Dashboard
+- Admin
+
+Pages **compose components**, they do not contain reusable logic.
+
+### `routes/`
+All routing logic.
+This folder is **lead-owned**.
+
+### `services/`
+API interaction layer.
+Used only in **Phase 2**.
+
+---
+
+## 🔒 Locked (Lead-Owned) Files
+
+The following files should NOT be modified by team members:
+
+src/App.jsx
+src/main.jsx
+src/routes/*
+src/components/layout/*
+tailwind.config.js
+postcss.config.js
+
+
+Any PR touching these files will not be merged.
+
+---
+
+## 👥 Team Workflow
+
+- Each feature is developed in a separate `feature/*` branch
+- All changes are merged into `dev` via Pull Requests
+- No direct pushes to `dev` or `main`
+
+---
+
+## 🚧 Development Phases
+
+### Phase 1 – UI & Structure (Current)
+- Build all pages using dummy data
+- No backend integration
+- No authentication logic
+- Focus on layout, components, and consistency
+
+### Phase 2 – Behavior & API Integration
+- Authentication & role-based access
+- Backend API integration
+- Chat, payments, dashboards
+
+---
+
+## ✅ Definition of Done (Phase 1)
+
+- App runs without errors
+- All pages render correctly
+- Navigation works
+- Tailwind styling applied
+- Clean and consistent structure
+
+---
+
+## 📌 Important Notes
+
+- Use Tailwind CSS for styling
+- Use common components (`Button`, `Input`, `Card`)
+- Do NOT add backend logic in Phase 1
+
+---
+
+## 🏁 Final Note
+
+This structure is frozen for Phase 1.
+Features will be built on top of this skeleton.
+
+Happy coding 🚀
+

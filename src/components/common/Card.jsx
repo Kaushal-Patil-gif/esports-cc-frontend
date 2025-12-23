@@ -1,6 +1,7 @@
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
+import PriceTag from "../marketplace/PriceTag";
 
-export default function ServiceCard({ title, description, price }) {
+export default function Card({ title, description, price }) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
@@ -24,9 +25,7 @@ export default function ServiceCard({ title, description, price }) {
       </p>
 
       <div className="flex justify-between items-center">
-        <span className="font-bold text-green-600">
-          ₹{price}+
-        </span>
+        <PriceTag price={price} />
 
         <button className="text-sm text-green-600 font-medium hover:underline">
           View Details →
