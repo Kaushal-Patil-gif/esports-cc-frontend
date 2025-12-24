@@ -1,7 +1,8 @@
+
 export default function Footer() {
   return (
     <footer>
-      <p>&copy; 2024 ProConnect. All rights reserved.</p>
+      <p>&copy;                        2025 Esports. All rights reserved.</p>
     </footer>
   );
 }
