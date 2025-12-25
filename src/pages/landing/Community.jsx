@@ -6,25 +6,25 @@ const communityCards = [
     title: "I am a Designer",
     image: "/assets/community/designer.jpg",
     description:
-      "ProConnect has allowed me to make connections to a wide variety of markets all over the globe. Fiverr has been by my side as what is felt like a guaranteed source of income through my entire graphic design career. Tom N. Guernsey, United KingdomDesigners create visual experiences including UI/UX, branding, graphics, and product designs.",
+      "ProConnect has allowed me to make connections to a wide variety of markets all over the globe. It has been a guaranteed source of income throughout my design career.",
   },
   {
     title: "I am a Developer",
     image: "/assets/community/developer.jpg",
     description:
-      "Fiverr has changed my life in ways i could only dream of. I’m extremely satisfied working on this platform while supporting my family and exploring the world with new opportunities",
+      "I’m extremely satisfied working on this platform while supporting my family and exploring global opportunities.",
   },
   {
     title: "I am a Writer",
     image: "/assets/community/writer.jpg",
     description:
-      "Through Fiverr Pro, I have been able to help people tell their stories and get their messages out into the world. Without Fiverr, I never would have been able to make my passion into my living!"
+      "This platform helped me turn my passion for storytelling into a full-time career.",
   },
   {
     title: "I am a Video Editor",
     image: "/assets/community/editor.jpg",
     description:
-      "Fiverr gave me the opportunity to connect with clients from all over the world; famous musicians, amazing speakers and business owners. I would not be where I am today without Fiverr!"
+      "I’ve connected with musicians, speakers, and businesses worldwide.",
   },
   {
     title: "I am a Marketer",
@@ -36,19 +36,19 @@ const communityCards = [
     title: "I am a Photographer",
     image: "/assets/community/photographer.jpg",
     description:
-      "Photographers capture professional photos for events, products, and portfolios.",
+      "Photographers capture professional photos for events and brands.",
   },
   {
     title: "I am a Consultant",
     image: "/assets/community/consultant.jpg",
     description:
-      "Consultants provide expert advice to help businesses improve performance.",
+      "Consultants help businesses improve performance and decision-making.",
   },
   {
     title: "What’s\nYour\nSkill?",
     image: "/assets/community/your-skill.jpg",
     description:
-      "Join the community and showcase your unique skills to a global audience.",
+      "Join the community and showcase your unique skills globally.",
   },
 ];
 
@@ -56,42 +56,43 @@ function Community() {
   const [selectedCard, setSelectedCard] = useState(null);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
-      {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-        Join our growing freelance{" "}
-        <span className="text-green-600"> Community</span>
-      </h2>
+    <>
+      {/* ================= COMMUNITY SECTION ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Join our growing freelance{" "}
+          <span className="text-green-600">Community</span>
+        </h2>
 
-      {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-        {communityCards.map((card, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.03 }}
-            onClick={() => setSelectedCard(card)}
-            className="relative group h-64 rounded-lg overflow-hidden cursor-pointer"
-          >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          {communityCards.map((card, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.03 }}
+              onClick={() => setSelectedCard(card)}
+              className="relative group h-64 rounded-lg overflow-hidden cursor-pointer"
+            >
+              <img
+                src={card.image}
+                alt={card.title}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
 
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition" />
+              <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute bottom-6 left-6 text-white text-xl font-bold leading-tight">
-              {card.title.split("\n").map((line, i) => (
-                <span key={i} className="block">
-                  {line}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        ))}
-      </div>
+              <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold text-center leading-tight px-4">
+                {card.title.split("\n").map((line, i) => (
+                  <span key={i} className="block">
+                    {line}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-      {/* Dialog / Modal */}
+      {/* ================= MODAL ================= */}
       <AnimatePresence>
         {selectedCard && (
           <motion.div
@@ -105,7 +106,6 @@ function Community() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-xl max-w-md w-full p-6"
             >
@@ -127,7 +127,40 @@ function Community() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+
+      {/* ================= HOW IT WORKS SECTION ================= */}
+      <section className="max-w-7xl mx-auto px-6 py-24 bg-gray-50 rounded-xl mt-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          How it <span className="text-green-600">works</span>
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">1. Create a Gig</h3>
+            <p className="text-gray-600">
+              Sign up for free, set up your Gig, and offer your work to a global
+              audience.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-4">
+              2. Deliver great work
+            </h3>
+            <p className="text-gray-600">
+              Communicate with customers and deliver high-quality work on time.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-4">3. Get paid</h3>
+            <p className="text-gray-600">
+              Get paid securely and withdraw earnings when cleared.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

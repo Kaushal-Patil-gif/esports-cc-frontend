@@ -1,24 +1,26 @@
-import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur shadow-sm">
+    <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
-        <Link to="/" className="text-2xl font-bold text-green-600">
+
+        <h1 className="text-2xl font-bold text-green-600">
           ProConnect
-        </Link>
+        </h1>
 
         <div className="flex items-center gap-6">
-          <Link to="/register" className="text-gray-700 hover:text-green-600">
+          <a className="text-gray-700 hover:text-green-600 cursor-pointer">
+            Services
+          </a>
+          <a className="text-gray-700 hover:text-green-600 cursor-pointer">
             Become a Pro
-          </Link>
-          <Link
-            to="/login"
-            className="bg-green-600 text-white px-4 py-2 rounded-md"
-          >
-            Login
-          </Link>
+          </a>
+          <Button variant="primary" className="px-4 py-2">
+            Sign In
+          </Button>
         </div>
+
       </div>
     </nav>
   );
