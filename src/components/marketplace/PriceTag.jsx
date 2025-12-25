@@ -1,7 +1,8 @@
-export default function PriceTag({ price, currency = "₹" }) {
+export default function PriceTag({ price }) {
   return (
-    <span className="font-bold text-green-600">
-      {currency}{price}+
-    </span>
+    <div className="text-right">
+      <p className="text-2xl font-bold text-slate-800">₹{price}</p>
+      <p className="text-sm text-slate-500">starting price</p>
+    </div>
   );
 }
