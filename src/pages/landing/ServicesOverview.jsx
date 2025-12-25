@@ -2,23 +2,33 @@ import ServiceCard from "../../components/marketplace/ServiceCard";
 
 const services = [
   {
-    title: "Web Development",
+    title: "Development & IT",
     description: "React, Node.js, and full-stack solutions",
     price: "10,000",
   },
   {
-    title: "UI/UX Design",
+    title: "Design & Creative",
     description: "Modern, user-centric design systems",
     price: "7,000",
   },
   {
-    title: "Mobile App Development",
-    description: "Android & cross-platform apps",
+    title: "Sales & Marketing",
+    description: "Strategy consulting and campaign management",
     price: "12,000",
   },
   {
-    title: "Digital Marketing",
-    description: "SEO, ads, and growth strategies",
+    title: "HR & Training",
+    description: "Recruitment, training programs, and talent management",
+    price: "5,000",
+  },
+  {
+    title: "Writing & Translation",
+    description: "Content writing and professional translation services",
+    price: "5,000",
+  },
+  {
+    title: "Finance & Accounting",
+    description: "Bookkeeping, tax planning, and financial advisory",
     price: "5,000",
   },
 ];
